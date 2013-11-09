@@ -1,0 +1,17 @@
+source "http://rubygems.org"
+
+gem "bourbon"
+
+# Compiling
+gem "jammit"
+
+# Guard
+gem "guard"
+gem 'guard-sass', require: false
+gem 'guard-copy', require: false
+gem "guard-jammit", require: false
+gem "guard-process", require: false
+
+gem 'guard-livereload', require: false
+gem 'rack-livereload', require: false
+gem 'rb-fsevent', require: false

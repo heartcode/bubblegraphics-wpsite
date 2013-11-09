@@ -1,0 +1,27 @@
+@charset "utf-8";
+//
+// Stylesheet manifest for FutureLearn by Robert Pataki [@robertpataki]
+// The structure and the methodology is based on SMACSS (http://smacss.com/) and it is using
+// Bourbon (http://bourbon.io/) to keep it well structured and awesome
+//
+//
+//
+//
+// Bourbon imports
+@import "vendor/bourbon/bourbon";
+//
+//
+// Base imports
+@import "base";
+//
+//
+// State imports
+// @import "states";
+//
+//
+// Layout imports
+// @import "layout";
+//
+//
+// Module imports
+@import "style";

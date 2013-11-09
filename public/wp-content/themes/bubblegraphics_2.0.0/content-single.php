@@ -7,9 +7,10 @@
     		  /*
     		  * Getting the images from the project folder
     		  */
+          global $projects_dir;
     		  $customFields = get_post_custom_values('Folder', $post->ID);
-    	    $projectFolder = 'projects/' . $customFields[0] . '/';
-		  
+    	    $projectFolder = $projects_dir . '/' . $customFields[0] . '/';
+
     		  $results = array();
     		  $i = 0;
     		  if($handler = opendir($projectFolder)) {
@@ -43,23 +44,23 @@
       	</header><!-- .entry-header -->
     		<?php the_content(); ?>
     		<nav id="prev-next-nav">
-    		  <?php previous_post_link('%link', "<div class='prev-next-post-links'><i class='icon-left-open-big'></i></div>") ?>
-          <?php next_post_link('%link', "<div class='prev-next-post-links'><i class='icon-right-open-big'></i></div>") ?>
-          <div class='prev-next-post-links page-top'><i class='icon-up-open-big'></i></div>
+    		  <?php previous_post_link('%link', "<div class='roundbutton'><i class='icon-roundbutton icon-left-open-big'></i></div>") ?>
+          <?php next_post_link('%link', "<div class='roundbutton'><i class='icon-roundbutton icon-right-open-big'></i></div>") ?>
+          <div class='roundbutton page-top'><i class='icon-roundbutton icon-up-open-big'></i></div>
     		  
           <a class="addthis_button" href="http://www.addthis.com/bookmark.php">
-    		    <div class='prev-next-post-links'><i class='icon-plus'></i></div>
+    		    <div class='roundbutton roundbutton-warn'><i class='icon-roundbutton icon-plus'></i></div>
     		  </a>
     		</nav>
   		</div>
   		
   		<nav id="prev-next-nav-bottom">
-  		  <?php previous_post_link('%link', "<div class='prev-next-post-links'><i class='icon-left-open-big'></i></div>") ?>
-  		  <?php next_post_link('%link', "<div class='prev-next-post-links'><i class='icon-right-open-big'></i></div>") ?>
-  		  <div class='prev-next-post-links page-top'><i class='icon-up-open-big'></i></div>
+  		  <?php previous_post_link('%link', "<div class='roundbutton'><i class='icon-roundbutton icon-left-open-big'></i></div>") ?>
+  		  <?php next_post_link('%link', "<div class='roundbutton'><i class='icon-roundbutton icon-right-open-big'></i></div>") ?>
+  		  <div class='roundbutton page-top'><i class='icon-roundbutton icon-up-open-big'></i></div>
   		  
   		  <a class="addthis_button" href="http://www.addthis.com/bookmark.php">
-  		    <div class='prev-next-post-links'><i class='icon-plus'></i></div>
+  		    <div class='roundbutton roundbutton-warn'><i class='icon-roundbutton icon-plus'></i></div>
   		  </a>
   		</nav>
   	</div><!-- .entry-content -->

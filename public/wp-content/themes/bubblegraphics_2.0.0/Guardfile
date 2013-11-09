@@ -1,0 +1,59 @@
+source_dir = "assets-src"
+compile_dir = "assets"
+js_dir = "javascripts"
+css_dir = "stylesheets"
+jammit_temp_dir = ".jammit-temp"
+
+# Compile the SASS files into CSS files
+guard 'sass',
+:compile_on_start => true,
+:input => 'assets-src/stylesheets-scss',
+:output => 'assets-src/stylesheets',
+:style => :compressed do
+  watch %r{^assets-src/stylesheets-scss/(.+\.s[ac]ss)$}
+  watch %r{^assets-src/stylesheets-scss/vendor/(.+\.s[ac]ss)$}
+  watch %r{^assets-src/stylesheets/(.+\.css)$}
+end
+
+# Compile (and minify, uglify) the JavaScript files
+guard :jammit,
+:package_on_start => true,
+:config_path => 'config/assets.yml',
+:output_folder => jammit_temp_dir do
+  watch(%r{^assets-src/javascripts/(.*)\.js$})
+  watch(%r{^assets-src/stylesheets/(.*)\.css$})
+  watch('config/assets.yml')
+end
+
+# Move the compiled JavaScript files under assets/javascripts
+guard 'copy', {
+    :from => "#{jammit_temp_dir}",
+    :to => "#{compile_dir}/#{js_dir}",
+    :mkpath => true,
+    :verbose => true,
+    :run_at_start => true
+  } do
+  puts 'Started watching JavaScripts to move'
+  watch(%r{^.*\.(js|js.gz)$})
+end
+
+
+# Move the compiled stylesheet files under assets/stylesheets
+guard 'copy', {
+    :from => "#{jammit_temp_dir}",
+    :to => "#{compile_dir}/#{css_dir}",
+    :mkpath => true,
+    :delete => true,
+    :verbose => true,
+    :run_at_start => true
+  } do
+  puts 'Started watching Stylesheets to move'
+  watch(%r{^.*\.(css|css.gz)$})
+end
+
+# Reload the browser
+guard 'livereload' do
+  watch(%r{/+\.(php)}) #watch html prototyping template folder
+  watch(%r{^assets/javascripts/(.*)\.js$})
+  watch(%r{^assets/stylesheets/(.*)\.css$})
+end

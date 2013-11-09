@@ -245,6 +245,11 @@
 	},
 	"file_history":
 	[
+		"/Users/rob/Sites/bubblegraphics.dev/public/wp-content/themes/bubblegraphics_2.0.0/vendor/bourbon/addons/_timing-functions.scss",
+		"/Users/rob/Sites/bubblegraphics.dev/public/wp-content/themes/bubblegraphics_1.2.0/footer.php",
+		"/Users/rob/Sites/bubblegraphics.dev/public/wp-content/themes/bubblegraphics_2.0.0/Gemfile",
+		"/Users/rob/Sites/bubblegraphics.dev/.git/rebase-merge/git-rebase-todo",
+		"/Users/rob/Sites/bubblegraphics.dev/bubblegraphics.sublime-project",
 		"/Users/rob/Sites/bubblegraphics/public/wp-content/themes/bubblegraphics_2.0.0/header.php",
 		"/Users/rob/Sites/bubblegraphics/public/wp-content/themes/bubblegraphics_2.0.0/functions.php",
 		"/Users/rob/Sites/bubblegraphics/public/wp-content/themes/bubblegraphics_2.0.0/assets/stylesheets/style.css",
@@ -367,12 +372,7 @@
 		"/Users/rob/Workspace/ustwo/bkey/src/common/sass/page-transitions.scss",
 		"/Users/rob/Workspace/ustwo/bkey/src/common/js/bk/ui/bk.account-transfer.js",
 		"/Users/rob/Desktop/transitionOutObserver/us2.page-transition.js",
-		"/Users/rob/Desktop/sssssave",
-		"/Users/rob/Desktop/transitionOutObserver/bk.loading.js",
-		"/Users/rob/Desktop/transitionOutObserver/us2.transition-out-observer.js",
-		"/Users/rob/Desktop/transitionOutObserver/bk-ui.scss",
-		"/Users/rob/Workspace/ustwo/bkey/src/sandbox/bk.loading.htm",
-		"/Users/rob/Desktop/bk.loading.js.new"
+		"/Users/rob/Desktop/sssssave"
 	],
 	"find":
 	{
@@ -434,6 +434,7 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"functions.js",
 			".js",
 			"wp-load.php",
 			"wp-load",
@@ -560,8 +561,7 @@
 			"getAccounts",
 			"fic",
 			"accountFixture2",
-			"modelFixture2",
-			"modelFixture1"
+			"modelFixture2"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -626,6 +626,10 @@
 		"height": 0.0,
 		"selected_items":
 		[
+			[
+				"gemfile",
+				"wp-content/themes/bubblegraphics_2.0.0/Gemfile"
+			],
 			[
 				"index.php",
 				"public/index.php"
@@ -1033,10 +1037,6 @@
 			[
 				"browserevents",
 				"src/common/js/bk/data-loaders/bk.browser-events.js"
-			],
-			[
-				"gemfile",
-				"Gemfile"
 			],
 			[
 				"movemymonetst",

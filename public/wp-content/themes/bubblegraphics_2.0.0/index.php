@@ -8,6 +8,7 @@
  * @subpackage Bubblegraphics
  * @since Bubblegraphics 1.0
  */
+global $projects_dir;
 get_header(); ?>
 <div class="wrapper">
 		<div id="primary">
@@ -28,7 +29,7 @@ get_header(); ?>
               		  * Getting the images from the project folder
               		  */
               		  $customFields = get_post_custom_values('Folder', $post->ID);
-              	    $projectFolder = 'projects/' . $customFields[0] . '/';
+              	    $projectFolder = $projects_dir . '/' . $customFields[0] . '/';
 
               		  $results = array();
               		  if($handler = opendir($projectFolder)) {

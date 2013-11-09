@@ -1,3 +1,8 @@
+<?php
+  global $stylesheets_dir;
+  global $javascripts_dir;
+?>
+
 <!DOCTYPE html>
   <!--
   Conditional IE Classes by Paul Irish.
@@ -82,11 +87,10 @@
 <link rel="shortcut icon" href="<?php bloginfo( 'stylesheet_directory' ); ?>/favicon.ico">
 <link rel="profile" href="http://gmpg.org/xfn/11" />
 <link rel='stylesheet' href='http://fonts.googleapis.com/css?family=Habibi' type='text/css'>
-<link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo( 'stylesheet_directory' ); ?>/normalize.css" />
-<link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo( 'stylesheet_directory' ); ?>/style.css" />
+<link rel="stylesheet" type="text/css" media="all" href="<?php echo $stylesheets_dir ?>/application.css" />
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
 <!--[if lt IE 9]>
-<script src="<?php echo get_template_directory_uri(); ?>/js/html5.js"></script>
+<script src="<?php echo $javascripts_dir ?>/header.js"></script>
 <![endif]-->
 <?php
 	/* Always have wp_head() just before the closing </head>
@@ -100,7 +104,7 @@
 
 <body <?php body_class(); ?>>
 	<header id="header-main">
-			<a id="logo-link" href="<?php bloginfo('url'); ?>" target=_self><img id="logo" src="<?php bloginfo('template_url'); ?>/images/bubblegraphics-logo.png" alt="Bubblegraphics" width="74" height="73" /></a>
+			<a id="logo" href="<?php bloginfo('url'); ?>" target=_self></a>
 			<nav id="access" role="navigation">
 				<?php 
 				  wp_nav_menu( array( 'theme_location' => '' ) );

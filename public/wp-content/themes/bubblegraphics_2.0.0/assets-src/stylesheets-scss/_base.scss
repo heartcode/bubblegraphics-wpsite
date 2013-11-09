@@ -1,0 +1,18 @@
+// ---------------------------------------------------------------------------
+/* Normalize/reset */
+@import "vendor/normalize";
+/* Global mixins */
+// @import "mixins";
+/* Global variables */
+// @import "variables";
+/* Global typography */
+// @import "typography";
+
+
+
+// ---------------------------------------------------------------------------
+// Global defaults
+body, html {
+  background-color: red;
+  color: blue;
+}

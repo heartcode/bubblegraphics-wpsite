@@ -39,6 +39,18 @@
  */
 
 /**
+ * Defining global URLS
+ */
+$content_dir = './wp-content';
+$template_dir = get_template_directory_uri();
+$assets_dir = $template_dir . '/assets';
+$stylesheets_dir = $assets_dir . '/stylesheets';
+$javascripts_dir = $assets_dir . '/javascripts';
+$images_dir = $assets_dir . '/images';
+$fonts_dir = $assets_dir . '/fonts';
+$projects_dir = $content_dir . '/projects';
+
+/**
  * Set the content width based on the theme's design and stylesheet.
  */
 if ( ! isset( $content_width ) )

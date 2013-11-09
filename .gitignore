@@ -1,0 +1,14 @@
+vendor/*
+.bundle
+bundle
+wp-config.php
+.htaccess
+public/wp-content/projects/*/*
+bourbon
+public/wp-content/themes/*/assets-src/stylesheets/*
+public/wp-content/themes/*/assets/stylesheets/*
+public/wp-content/themes/*/assets/javascripts/*
+.sass-cache
+.jammit-temp
+public/wp-content/themes/*/assets/javascripts/*
+public/wp-content/themes/*/assets/stylesheets/*
